@@ -276,37 +276,19 @@ a {
 }
 
 
-.showcase-carousel {
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-xs);
-    animation: scroll-carousel 35s linear infinite;
-    width: max-content;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
-.carousel-track img {
-    height: 22rem;
-    width: auto;
-    max-width: none;
-    flex-shrink: 0;
+.showcase-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 4px;
-}
-
-@keyframes scroll-carousel {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.showcase-carousel:hover .carousel-track {
-    animation-play-state: paused;
 }
 
 
