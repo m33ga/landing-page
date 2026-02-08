@@ -157,6 +157,11 @@ a {
     color: var(--white);
 }
 
+.hero-content img {
+    display: block;
+    margin: 0 auto var(--space-sm);
+}
+
 .hero-content h1 {
     font-family: var(--font-heading), sans-serif;
     font-size: 3.2rem;
