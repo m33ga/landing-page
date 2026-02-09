@@ -386,10 +386,25 @@ a {
 
 
 .team {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     min-height: 80vh;
 }
+
+.team-image,
+.team-content {
+    flex: 1 1 50%;
+}
+
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+    }
+
+    .team-image {
+        height: 45vh;
+    }
+}
+
 
 .team-image {
     overflow: hidden;
