@@ -160,6 +160,7 @@ a {
 .hero-content img {
     display: block;
     margin: 0 auto var(--space-sm);
+    max-height: 25vh;
 }
 
 .hero-content h1 {
