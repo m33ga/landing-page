@@ -471,7 +471,7 @@ a {
 .footer-contact {
     display: flex;
     justify-content: center;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     flex-wrap: wrap;
     margin-bottom: var(--space-md);
 }
