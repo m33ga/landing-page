@@ -180,8 +180,15 @@ a {
     margin-bottom: var(--space-md);
 }
 
+.hero-cta {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space-sm);
+    justify-content: center;
+}
+
 .cta-primary {
-    display: inline-block;
+    display: inline-flex;
     padding: 0.9rem 2.2rem;
     border: 2px solid var(--copper);
     background-color: var(--copper);
@@ -200,9 +207,7 @@ a {
 }
 
 .cta-secondary {
-    display: inline-block;
-    margin-top: var(--space-sm);
-    margin-left: var(--space-sm);
+    display: inline-flex;
     padding: 0.9rem 2.2rem;
     border: 2px solid var(--almond-cream);
     color: var(--almond-cream);
