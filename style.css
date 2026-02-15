@@ -100,10 +100,12 @@ a {
 }
 
 .nav-cta {
-    display: inline-block;
+    display: inline-flex;
     padding: 0.5rem 1.25rem;
     background-color: var(--copper);
     color: var(--white) !important;
+    align-items: center;
+    gap: 0.6rem;
     border-radius: 4px;
     font-weight: 600;
     transition: background-color 0.2s ease;
@@ -193,6 +195,8 @@ a {
     border: 2px solid var(--copper);
     background-color: var(--copper);
     color: var(--white);
+    align-items: center;
+    gap: 0.6rem;
     font-size: 1.05rem;
     font-weight: 600;
     border-radius: 4px;
@@ -209,8 +213,10 @@ a {
 .cta-secondary {
     display: inline-flex;
     padding: 0.9rem 2.2rem;
-    border: 2px solid var(--almond-cream);
-    color: var(--almond-cream);
+    border: 2px solid var(--floral-white);
+    color: var(--floral-white);
+    align-items: center;
+    gap: 0.6rem;
     font-size: 1.05rem;
     font-weight: 500;
     border-radius: 4px;
@@ -223,6 +229,13 @@ a {
     color: var(--dark-coffee);
 }
 
+.cta-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+}
 
 .value-proposition {
     padding: var(--space-xl) var(--space-md);
