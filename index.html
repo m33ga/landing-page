@@ -24,19 +24,19 @@
 </head>
 <body id="acasa">
     <object type="image/svg+xml" data="assets/icons/sprite.svg" style="display:none;"></object>
-    <header class="site-header">
-        <nav class="main-nav" aria-label="Navigare principală">
-            <a href="#acasa" class="nav-logo" aria-label="Bolduratu Arta Lemnului — Înapoi la pagina principală">
-                <img src="assets/images/logos/logo.png" alt="Logo Bolduratu Arta Lemnului">
+    <header class="fixed top-0 left-0 w-full z-100 bg-dark-coffee/50 backdrop-blur-sm">
+        <nav class="flex items-center justify-between max-w-6xl mx-auto px-8 py-4" aria-label="Navigare principală">
+            <a href="#acasa" aria-label="Bolduratu Arta Lemnului — Înapoi la pagina principală">
+                <img src="assets/images/logos/logo.png" alt="Logo Bolduratu Arta Lemnului" class="h-10 w-auto">
             </a>
 
-            <ul class="nav-links">
-                <li><a href="#lucrari">Lucrări</a></li>
-                <li><a href="#despre-noi">Despre Noi</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="flex items-center gap-8">
+                <li><a href="#lucrari" class="text-floral-white text-sm font-medium tracking-wide hover:text-white transition-colors duration-200">Lucrări</a></li>
+                <li><a href="#despre-noi" class="text-floral-white text-sm font-medium tracking-wide hover:text-white transition-colors duration-200">Despre Noi</a></li>
+                <li><a href="#contact" class="text-floral-white text-sm font-medium tracking-wide hover:text-white transition-colors duration-200">Contact</a></li>
                 <li>
-                    <a href="tel:+37368814134" class="nav-cta">
-                    <svg class="cta-icon" aria-hidden="true">
+                    <a href="tel:+37368814134" class="inline-flex items-center gap-2.5 px-5 py-2 bg-copper text-white font-semibold rounded transition-colors duration-200 hover:bg-focused-brown">
+                    <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
                         <use href="assets/icons/sprite.svg#icon-phone"></use>
                     </svg>
                     <span>+373 68 814 134</span>
