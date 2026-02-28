@@ -47,23 +47,23 @@
     </header>
 
     <main>
-        <section class="hero" id="hero" aria-label="Secțiunea principală">
-            <div class="hero-image">
-                <img src="assets/images/hero/7.avif" alt="">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero" aria-label="Secțiunea principală">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/hero/7.avif" alt="" class="w-full h-full object-cover">
             </div>
 
-            <div class="hero-overlay"></div>
+            <div class="absolute inset-0 z-10 bg-gradient-to-b from-dark-coffee/50 to-dark-coffee/85"></div>
 
-            <div class="hero-content">
-                <img src="assets/images/logos/logo.png" alt="Bolduratu Arta Lemnului">
-                <h1>Lemn lucrat cu suflet, pentru casa ta</h1>
-                <p class="hero-subtitle">
+            <div class="relative z-20 max-w-2xl px-8 py-24 text-center text-white">
+                <img src="assets/images/logos/logo.png" alt="Bolduratu Arta Lemnului" class="block mx-auto mb-4 max-h-[25vh]">
+                <h1 class="font-heading text-5xl font-bold leading-tight mb-4 tracking-tight">Lemn lucrat cu suflet, pentru casa ta</h1>
+                <p class="text-lg font-light leading-relaxed text-floral-white mb-8">
                     Lemn masiv, accesorii și mobilier unicat — fiecare piesă
                     poartă amprenta mâinilor noastre și povestea lemnului.
                 </p>
-                <div class="hero-cta">
-                    <a href="tel:+37368814134" class="cta-primary">
-                        <svg class="cta-icon" aria-hidden="true">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="tel:+37368814134" class="inline-flex items-center gap-2.5 px-9 py-3.5 border-2 border-copper bg-copper text-white text-base font-semibold rounded tracking-wide transition-all duration-200 hover:bg-focused-brown hover:-translate-y-0.5">
+                        <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
                             <use href="assets/icons/sprite.svg#icon-phone"></use>
                         </svg>
                         <span>Solicită o Consultație</span>
@@ -72,8 +72,8 @@
                     <a href="https://www.instagram.com/bolduratu_arta_lemnului/"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="cta-secondary">
-                        <svg class="cta-icon" aria-hidden="true">
+                       class="inline-flex items-center gap-2.5 px-9 py-3.5 border-2 border-floral-white text-floral-white text-base font-medium rounded transition-all duration-200 hover:bg-floral-white hover:text-dark-coffee">
+                        <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
                             <use href="assets/icons/sprite.svg#icon-instagram"></use>
                         </svg>
                         <span>Urmărește pagina noastră</span>
