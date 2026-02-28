@@ -6,8 +6,9 @@
     <meta name="description" content="Bolduratu Arta Lemnului — Atelier de tâmplărie artizanală.">
     <title>Bolduratu Arta Lemnului</title>
     <link rel="icon" href="assets/images/logos/logo.png" type="image/png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
@@ -20,10 +21,21 @@
             --font-heading: 'Onest', sans-serif;
             --font-body: 'Onest', sans-serif;
         }
+
+        @layer base {
+            html {
+                scroll-behavior: smooth;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
     </style>
 </head>
-<body id="acasa">
-    <object type="image/svg+xml" data="assets/icons/sprite.svg" style="display:none;"></object>
+<body id="acasa" class="font-body text-base font-normal leading-relaxed text-dark-coffee bg-white antialiased">
+    <object type="image/svg+xml" data="assets/icons/sprite.svg" class="hidden"></object>
     <header class="fixed top-0 left-0 w-full z-100 bg-dark-coffee/50 backdrop-blur-sm">
         <nav class="flex items-center justify-between max-w-6xl mx-auto px-8 py-4" aria-label="Navigare principală">
             <a href="#acasa" aria-label="Bolduratu Arta Lemnului — Înapoi la pagina principală">
