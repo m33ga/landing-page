@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/m33ga/landing-page#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.0",
+    "@tailwindcss/cli": "^4.2.1",
     "tailwindcss": "^4.2.0"
   }
 }

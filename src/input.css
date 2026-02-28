@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    --color-white: #FDFDFD;
+    --color-floral-white: #FDF8EB;
+    --color-copper: #B07C4C;
+    --color-taupe: #92817a;
+    --color-dark-coffee: #362417;
+    --color-focused-brown: #956639;
+    --font-heading: 'Onest', sans-serif;
+    --font-body: 'Onest', sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
