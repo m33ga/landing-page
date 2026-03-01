@@ -294,8 +294,8 @@ const phoneHref = `tel:${phone}`;
           {about.subtitle}
         </p>
         {
-          about.paragraphs?.map((text) => (
-            <p class="text-sm text-taupe leading-loose mb-4">{text}</p>
+          about.paragraphs?.map((item) => (
+            <p class="text-sm text-taupe leading-loose mb-4">{item.text}</p>
           ))
         }
       </div>
