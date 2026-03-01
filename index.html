@@ -217,8 +217,46 @@
         </ul>
     </footer>
 
-    <div class="mascot" id="mascot" aria-label="Mascota atelierului">
-        <img src="assets/images/mascot/woodworking_mascot.png" alt="Mascota Bolduratu — ciocan vesel" class="mascot-img">
+    <div
+    id="mascot"
+    aria-label="Mascota atelierului"
+    class="group fixed bottom-5 left-5 md:bottom-4 z-[90]
+         cursor-pointer select-none
+         opacity-0
+         animate-[mascot-enter_0.6s_ease-out_3s_forwards]">
+
+        <div
+        class="absolute bottom-[calc(100%+0.5rem)] left-0
+               w-max max-w-[13rem]
+               px-3 py-2
+               rounded-[0.625rem]
+               text-[0.8125rem] font-medium leading-[1.45]
+               bg-[var(--color-floral-white)]
+               text-[var(--color-dark-coffee)]
+               shadow-[0_4px_16px_rgba(0,0,0,0.12)]
+               drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]
+               opacity-0 translate-y-1
+               transition-all duration-200
+               pointer-events-none
+               group-hover:opacity-100 group-hover:translate-y-0">
+
+        Ai nevoie de o piesă din lemn? Sună-ne!
+
+        <span
+          class="absolute top-full left-6
+                 border-[6px] border-transparent
+                 border-t-[var(--color-floral-white)]">
+        </span>
+        </div>
+
+        <img
+        src="assets/images/mascot/woodworking_mascot.png"
+        alt="Mascota - ciocan"
+        class="w-20 md:w-16 h-auto
+               drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]
+               origin-bottom
+               transition-transform duration-200
+               animate-[mascot-tilt_3s_ease-in-out_infinite]" />
     </div>
 
 </body>
