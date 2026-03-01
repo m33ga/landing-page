@@ -1,26 +1,19 @@
 {
   "name": "landing-page",
-  "version": "1.0.0",
-  "description": "A static landing page for **Bolduratu Arta Lemnului**, a family-owned woodworking shop specializing in handcrafted\r wooden products. Built with pure HTML and CSS, the page showcases authentic craftsmanship, tradition, and attention to\r detail.",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./style.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./style.css --minify"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/m33ga/landing-page.git"
+  "dependencies": {
+    "astro": "^5.17.1",
+    "tinacms": "^3.5.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/m33ga/landing-page/issues"
-  },
-  "homepage": "https://github.com/m33ga/landing-page#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.1",
-    "tailwindcss": "^4.2.0"
+    "@tinacms/cli": "^2.1.7",
+    "@types/node": "^25.3.3"
   }
 }
