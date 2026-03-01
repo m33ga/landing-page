@@ -14,44 +14,44 @@
 <body id="acasa" class="font-body text-base font-normal leading-relaxed text-dark-coffee bg-white antialiased">
     <object type="image/svg+xml" data="assets/icons/sprite.svg" class="hidden"></object>
     <header class="site-header fixed top-0 left-0 w-full z-100 bg-dark-coffee/50 backdrop-blur-sm">
-        <nav class="site-nav flex items-center justify-between max-w-6xl mx-auto px-8 py-4" aria-label="Navigare principală">
-            <a href="#acasa" class="nav-logo" aria-label="Bolduratu Arta Lemnului — Înapoi la pagina principală">
+        <nav class="flex items-center justify-center md:justify-between max-w-6xl mx-auto px-8 py-4" aria-label="Navigare principală">
+            <a href="#acasa" class="hidden md:block" aria-label="Bolduratu Arta Lemnului — Înapoi la pagina principală">
                 <img src="assets/images/logos/logo.png" alt="Logo Bolduratu Arta Lemnului" class="h-10 w-auto">
             </a>
 
-            <ul class="nav-links flex items-center gap-8">
-                <li class="nav-item-mobile">
-                    <a href="#acasa" class="nav-icon-link text-floral-white hover:text-white transition-colors duration-200" aria-label="Acasă">
-                        <svg class="nav-icon w-6 h-6 fill-current" aria-hidden="true">
+            <ul class="nav-links flex items-center gap-12 md:gap-8">
+                <li class="block md:hidden">
+                    <a href="#acasa" class="text-floral-white hover:text-white transition-colors duration-200" aria-label="Acasă">
+                        <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
                             <use href="assets/icons/sprite.svg#icon-home"></use>
                         </svg>
                     </a>
                 </li>
                 <li>
                     <a href="#lucrari" class="nav-link text-floral-white hover:text-white transition-colors duration-200" aria-label="Lucrări">
-                        <svg class="nav-icon w-6 h-6 fill-current" aria-hidden="true">
+                        <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
                             <use href="assets/icons/sprite.svg#icon-tools"></use>
                         </svg>
-                        <span class="nav-label text-sm font-medium tracking-wide">Lucrări</span>
+                        <span class="hidden md:block text-sm font-medium tracking-wide">Lucrări</span>
                     </a>
                 </li>
                 <li>
                     <a href="#despre-noi" class="nav-link text-floral-white hover:text-white transition-colors duration-200" aria-label="Despre Noi">
-                        <svg class="nav-icon w-6 h-6 fill-current" aria-hidden="true">
+                        <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
                             <use href="assets/icons/sprite.svg#icon-team"></use>
                         </svg>
-                        <span class="nav-label text-sm font-medium tracking-wide">Despre Noi</span>
+                        <span class="hidden md:block text-sm font-medium tracking-wide">Despre Noi</span>
                     </a>
                 </li>
                 <li>
                     <a href="#contact" class="nav-link text-floral-white hover:text-white transition-colors duration-200" aria-label="Contact">
-                        <svg class="nav-icon w-6 h-6 fill-current" aria-hidden="true">
+                        <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
                             <use href="assets/icons/sprite.svg#icon-phone"></use>
                         </svg>
-                        <span class="nav-label text-sm font-medium tracking-wide">Contact</span>
+                        <span class="hidden md:block text-sm font-medium tracking-wide">Contact</span>
                     </a>
                 </li>
-                <li class="nav-cta-desktop">
+                <li class="hidden md:block">
                     <a href="tel:+37368814134" class="inline-flex items-center gap-2.5 px-5 py-2 bg-copper text-white font-semibold rounded transition-colors duration-200 hover:bg-focused-brown">
                     <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
                         <use href="assets/icons/sprite.svg#icon-phone"></use>
@@ -64,7 +64,7 @@
     </header>
 
     <a href="tel:+37368814134"
-       class="cta-floating fixed bottom-5 right-5 z-100 inline-flex items-center gap-2 px-4 py-3 bg-copper text-white font-semibold rounded-full shadow-lg transition-all duration-200 hover:bg-focused-brown active:scale-95"
+       class="md:hidden fixed bottom-5 right-5 z-100 inline-flex items-center gap-2 px-4 py-3 bg-copper text-white font-semibold rounded-full shadow-lg transition-all duration-200 hover:bg-focused-brown active:scale-95"
        aria-label="Sună pentru estimare gratuită">
         <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
             <use href="assets/icons/sprite.svg#icon-phone"></use>
