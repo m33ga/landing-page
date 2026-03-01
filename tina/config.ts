@@ -30,13 +30,6 @@ export default defineConfig({
         label: "Landing Page",
         path: "content/page",
         format: "json",
-        ui: {
-          allowedActions: {
-            create: false,
-            delete: false,
-          },
-          router: () => "/",
-        },
         fields: [
           // ── Site-wide ──────────────────────────────────────
           {
@@ -234,11 +227,24 @@ export default defineConfig({
                 ui: { component: "textarea" },
               },
               {
-                type: "string",
+                type: "object",
                 name: "paragraphs",
                 label: "Body Paragraphs",
                 list: true,
-                ui: { component: "textarea" },
+                ui: {
+                  itemProps: (item: Record<string, string>) => ({
+                    label:
+                      item?.text?.substring(0, 40) + "…" || "New Paragraph",
+                  }),
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "text",
+                    label: "Paragraph Text",
+                    ui: { component: "textarea" },
+                  },
+                ],
               },
               {
                 type: "image",
