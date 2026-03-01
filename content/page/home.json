@@ -1,0 +1,81 @@
+{
+  "siteTitle": "Bolduratu Arta Lemnului",
+  "siteDescription": "Bolduratu Arta Lemnului — Atelier de tâmplărie artizanală.",
+  "logo": "/assets/images/logos/logo.png",
+  "favicon": "/assets/images/logos/logo.png",
+  "phone": "+37368814134",
+  "phoneDisplay": "+373 68 814 134",
+  "availability": "Disponibili Luni - Sâmbătă, 08:00 - 18:00",
+  "hero": {
+    "heading": "Lemn lucrat cu suflet, pentru casa ta",
+    "subheading": "Lemn masiv, accesorii și mobilier unicat — fiecare piesă poartă amprenta mâinilor noastre și povestea lemnului.",
+    "backgroundImage": "/assets/images/hero/7.avif",
+    "primaryCtaText": "Solicită o Consultație",
+    "primaryCtaLink": "tel:+37368814134",
+    "secondaryCtaText": "Urmărește pagina noastră",
+    "secondaryCtaLink": "https://www.instagram.com/bolduratu_arta_lemnului/"
+  },
+  "features": {
+    "heading": "De Ce Bolduratu?",
+    "description": "Fiecare piesă e o poveste. Creăm din lemn masiv, cu grijă pentru detalii și respect pentru tradiția meșteșugului autentic.",
+    "items": [
+      {
+        "title": "Lemn Masiv, Selectat Manual",
+        "description": "Folosim exclusiv lemn masiv de calitate superioară, ales cu grijă pentru fiecare proiect în parte."
+      },
+      {
+        "title": "Lucrat Manual, Cu Atenție",
+        "description": "Fiecare piesă este realizată de mână, fără producție de serie — primești un produs unic, nu o copie."
+      },
+      {
+        "title": "Tradiție de Familie",
+        "description": "Suntem un atelier familial cu experiență transmisă din generație în generație. Meșteșugul nostru e moștenit, nu improvizat."
+      },
+      {
+        "title": "Personalizare Completă",
+        "description": "Construim după nevoile tale — dimensiuni, esență de lemn, finisaj. Tu decizi, noi creăm."
+      }
+    ]
+  },
+  "showcase": {
+    "images": [
+      "/assets/images/showcase/1.avif",
+      "/assets/images/showcase/2.avif",
+      "/assets/images/showcase/3.avif",
+      "/assets/images/showcase/4.avif",
+      "/assets/images/showcase/5.avif",
+      "/assets/images/showcase/6.avif",
+      "/assets/images/showcase/8.avif",
+      "/assets/images/showcase/9.avif"
+    ]
+  },
+  "cta": {
+    "heading": "Hai Să Construim Împreună",
+    "description": "Fiecare proiect începe cu o discuție. Spune-ne ce îți dorești, iar noi îți oferim o estimare gratuită — fără obligații, doar sfat sincer de la meșteri cu experiență.",
+    "checklist": [
+      "Lucrări personalizate, adaptate spațiului tău",
+      "Meșteșug local, fără intermediari",
+      "Consultanță gratuită și transparentă"
+    ],
+    "callLabel": "Sună sau scrie un mesaj:"
+  },
+  "about": {
+    "heading": "Oamenii din Spatele Meșteșugului",
+    "subtitle": "Atelierul nostru e locul unde experiența de o viață întâlnește energia și ideile tinere.",
+    "paragraphs": [
+      "Tata ne-a pus dalta în mână încă din copilărie. De atunci, fiecare piesă pe care o creăm poartă în ea răbdarea lui, perfecționismul nostru și dragostea comună pentru lemnul cinstit lucrat.",
+      "Nu lucrăm cu compromisuri. Alegem personal fiecare scândură, fiecare îmbinare e gândită să reziste generații, iar finisajul e cel care face diferența între un obiect și o operă."
+    ],
+    "teamImage": "/assets/images/team/team.avif"
+  },
+  "contact": {
+    "heading": "Contact",
+    "instagramUrl": "https://www.instagram.com/bolduratu_arta_lemnului/",
+    "instagramHandle": "@bolduratu_arta_lemnului",
+    "address": "s. Peresecina, r. Orhei, Republica Moldova"
+  },
+  "mascot": {
+    "bubbleText": "Ai nevoie de o piesă din lemn? Sună-ne!",
+    "image": "/assets/images/mascot/woodworking_mascot.png"
+  }
+}
