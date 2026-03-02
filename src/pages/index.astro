@@ -21,6 +21,10 @@ const {
 } = homeData;
 
 const phoneHref = `tel:${phone}`;
+
+const BASE = import.meta.env.BASE_URL;
+const withBase = (path: string) =>
+  path?.startsWith("http") ? path : `${BASE}${path.replace(/^\//, "")}`;
 ---
 
 <Layout title={siteTitle} description={siteDescription} favicon={favicon}>
@@ -37,7 +41,7 @@ const phoneHref = `tel:${phone}`;
         class="hidden md:block"
         aria-label={`${siteTitle} — Înapoi la pagina principală`}
       >
-        <img src={logo} alt={`Logo ${siteTitle}`} class="h-10 w-auto" />
+        <img src={withBase(logo)} alt={`Logo ${siteTitle}`} class="h-10 w-auto" />
       </a>
 
       <ul class="nav-links flex items-center gap-12 md:gap-8">
@@ -48,7 +52,7 @@ const phoneHref = `tel:${phone}`;
             aria-label="Acasă"
           >
             <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-home"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-home"}></use>
             </svg>
           </a>
         </li>
@@ -59,7 +63,7 @@ const phoneHref = `tel:${phone}`;
             aria-label="Lucrări"
           >
             <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-tools"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-tools"}></use>
             </svg>
             <span class="hidden md:block text-sm font-medium tracking-wide"
               >Lucrări</span
@@ -73,7 +77,7 @@ const phoneHref = `tel:${phone}`;
             aria-label="Despre Noi"
           >
             <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-team"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-team"}></use>
             </svg>
             <span class="hidden md:block text-sm font-medium tracking-wide"
               >Despre Noi</span
@@ -87,7 +91,7 @@ const phoneHref = `tel:${phone}`;
             aria-label="Contact"
           >
             <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-phone"}></use>
             </svg>
             <span class="hidden md:block text-sm font-medium tracking-wide"
               >Contact</span
@@ -100,7 +104,7 @@ const phoneHref = `tel:${phone}`;
             class="inline-flex items-center gap-2.5 px-5 py-2 bg-copper text-white font-semibold rounded transition-colors duration-200 hover:bg-focused-brown"
           >
             <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-phone"}></use>
             </svg>
             <span>{phoneDisplay}</span>
           </a>
@@ -116,7 +120,7 @@ const phoneHref = `tel:${phone}`;
     aria-label="Sună pentru estimare gratuită"
   >
     <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
-      <use href="/assets/icons/sprite.svg#icon-phone"></use>
+      <use href={withBase("/assets/icons/sprite.svg") + "#icon-phone"}></use>
     </svg>
     <span class="text-sm">{phoneDisplay}</span>
   </a>
@@ -130,7 +134,7 @@ const phoneHref = `tel:${phone}`;
     >
       <div class="absolute inset-0 z-0">
         <img
-          src={hero.backgroundImage}
+          src={withBase(hero.backgroundImage)}
           alt=""
           class="w-full h-full object-cover"
         />
@@ -145,7 +149,7 @@ const phoneHref = `tel:${phone}`;
         class="relative z-20 max-w-2xl w-full px-6 md:px-8 py-8 min-[414px]:py-12 md:py-24 text-center text-white"
       >
         <img
-          src={logo}
+          src={withBase(logo)}
           alt={siteTitle}
           class="block mx-auto mb-2 md:mb-4 max-h-[12vh] min-[414px]:max-h-[16vh] sm:max-h-[18vh] md:max-h-[25vh]"
         />
@@ -165,7 +169,7 @@ const phoneHref = `tel:${phone}`;
             class="w-full sm:w-auto inline-flex justify-center items-center gap-2.5 px-9 py-3.5 border-2 border-copper bg-copper text-white text-base font-semibold rounded tracking-wide transition-all duration-200 hover:bg-focused-brown hover:-translate-y-0.5"
           >
             <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-phone"}></use>
             </svg>
             <span>{hero.primaryCtaText}</span>
           </a>
@@ -177,7 +181,7 @@ const phoneHref = `tel:${phone}`;
             class="w-full sm:w-auto inline-flex justify-center items-center gap-2.5 px-9 py-3.5 border-2 border-floral-white text-floral-white text-base font-medium rounded transition-all duration-200 hover:bg-floral-white hover:text-dark-coffee"
           >
             <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#icon-instagram"></use>
+              <use href={withBase("/assets/icons/sprite.svg") + "#icon-instagram"}></use>
             </svg>
             <span>{hero.secondaryCtaText}</span>
           </a>
@@ -226,7 +230,7 @@ const phoneHref = `tel:${phone}`;
         {
           showcase.images?.map((src) => (
             <img
-              src={src}
+              src={withBase(src)}
               alt=""
               class="flex-1 basis-48 h-64 object-cover rounded"
             />
@@ -279,7 +283,7 @@ const phoneHref = `tel:${phone}`;
     >
       <div class="flex-1 overflow-hidden max-md:h-[45vh]">
         <img
-          src={about.teamImage}
+          src={withBase(about.teamImage)}
           alt="Echipa"
           class="w-full h-full object-cover"
         />
@@ -343,8 +347,8 @@ const phoneHref = `tel:${phone}`;
       {mascot.bubbleText}
     </div>
     <img
-      src={mascot.image}
-      alt="Mascota Bolduratu — ciocan vesel"
+      src={withBase(mascot.image)}
+      alt="Mascota"
       class="mascot-img w-20 h-auto max-md:w-16"
     />
   </div>
