@@ -10,7 +10,7 @@ export default defineConfig({
   branch,
 
   // Get these from tina.io when deploying to TinaCMS Cloud
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  clientId: process.env.PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
 
   build: {
