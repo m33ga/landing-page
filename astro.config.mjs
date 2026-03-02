@@ -9,4 +9,5 @@ export default defineConfig({
   },
   site: "https://m33ga.github.io",
   base: "/landing-page/",
+  trailingSlash: "always",
 });
