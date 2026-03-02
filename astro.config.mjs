@@ -7,4 +7,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: "https://m33ga.github.io",
+  base: "/landing-page",
 });
