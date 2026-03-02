@@ -8,5 +8,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://m33ga.github.io",
-  base: "/landing-page",
+  base: "/landing-page/",
 });
