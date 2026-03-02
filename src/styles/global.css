@@ -22,16 +22,17 @@
     }
 }
 
+/* ── Mascot animations ──────────────────────────────────── */
 
 @keyframes mascot-enter {
     from { opacity: 0; transform: translateY(2rem); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes mascot-tilt {
     0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
+    25%      { transform: rotate(5deg); }
+    75%      { transform: rotate(-5deg); }
 }
 
 .mascot {

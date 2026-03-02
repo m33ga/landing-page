@@ -1,0 +1,351 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import homeData from "../../content/page/home.json";
+
+const {
+  siteTitle,
+  siteDescription,
+  logo,
+  favicon,
+  phone,
+  phoneDisplay,
+  availability,
+  hero,
+  features,
+  showcase,
+  cta,
+  about,
+  contact,
+  mascot,
+} = homeData;
+
+const phoneHref = `tel:${phone}`;
+---
+
+<Layout title={siteTitle} description={siteDescription} favicon={favicon}>
+  <!-- ═══ Header ═══ -->
+  <header
+    class="site-header fixed top-0 left-0 w-full z-100 bg-dark-coffee/50 backdrop-blur-sm"
+  >
+    <nav
+      class="flex items-center justify-center md:justify-between max-w-6xl mx-auto px-8 py-4"
+      aria-label="Navigare principală"
+    >
+      <a
+        href="#acasa"
+        class="hidden md:block"
+        aria-label={`${siteTitle} — Înapoi la pagina principală`}
+      >
+        <img src={logo} alt={`Logo ${siteTitle}`} class="h-10 w-auto" />
+      </a>
+
+      <ul class="nav-links flex items-center gap-12 md:gap-8">
+        <li class="block md:hidden">
+          <a
+            href="#acasa"
+            class="text-floral-white hover:text-white transition-colors duration-200"
+            aria-label="Acasă"
+          >
+            <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-home"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#lucrari"
+            class="nav-link text-floral-white hover:text-white transition-colors duration-200"
+            aria-label="Lucrări"
+          >
+            <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-tools"></use>
+            </svg>
+            <span class="hidden md:block text-sm font-medium tracking-wide"
+              >Lucrări</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#despre-noi"
+            class="nav-link text-floral-white hover:text-white transition-colors duration-200"
+            aria-label="Despre Noi"
+          >
+            <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-team"></use>
+            </svg>
+            <span class="hidden md:block text-sm font-medium tracking-wide"
+              >Despre Noi</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="nav-link text-floral-white hover:text-white transition-colors duration-200"
+            aria-label="Contact"
+          >
+            <svg class="block md:hidden w-6 h-6 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+            </svg>
+            <span class="hidden md:block text-sm font-medium tracking-wide"
+              >Contact</span
+            >
+          </a>
+        </li>
+        <li class="hidden md:block">
+          <a
+            href={phoneHref}
+            class="inline-flex items-center gap-2.5 px-5 py-2 bg-copper text-white font-semibold rounded transition-colors duration-200 hover:bg-focused-brown"
+          >
+            <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+            </svg>
+            <span>{phoneDisplay}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══ Mobile FAB ═══ -->
+  <a
+    href={phoneHref}
+    class="md:hidden fixed bottom-5 right-5 z-100 inline-flex items-center gap-2 px-4 py-3 bg-copper text-white font-semibold rounded-full shadow-lg transition-all duration-200 hover:bg-focused-brown active:scale-95"
+    aria-label="Sună pentru estimare gratuită"
+  >
+    <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
+      <use href="/assets/icons/sprite.svg#icon-phone"></use>
+    </svg>
+    <span class="text-sm">{phoneDisplay}</span>
+  </a>
+
+  <main>
+    <!-- ═══ Hero ═══ -->
+    <section
+      class="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
+      id="hero"
+      aria-label="Secțiunea principală"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src={hero.backgroundImage}
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div
+        class="absolute inset-0 z-10 bg-gradient-to-b from-dark-coffee/50 to-dark-coffee/85"
+      >
+      </div>
+
+      <div
+        class="relative z-20 max-w-2xl w-full px-6 md:px-8 py-8 min-[414px]:py-12 md:py-24 text-center text-white"
+      >
+        <img
+          src={logo}
+          alt={siteTitle}
+          class="block mx-auto mb-2 md:mb-4 max-h-[12vh] min-[414px]:max-h-[16vh] sm:max-h-[18vh] md:max-h-[25vh]"
+        />
+        <h1
+          class="font-heading text-3xl min-[414px]:text-4xl md:text-5xl font-bold leading-tight mb-3 md:mb-4 tracking-tight"
+        >
+          {hero.heading}
+        </h1>
+        <p
+          class="text-base min-[414px]:text-lg font-light leading-relaxed text-floral-white mb-4 min-[414px]:mb-6 md:mb-8"
+        >
+          {hero.subheading}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full">
+          <a
+            href={hero.primaryCtaLink}
+            class="w-full sm:w-auto inline-flex justify-center items-center gap-2.5 px-9 py-3.5 border-2 border-copper bg-copper text-white text-base font-semibold rounded tracking-wide transition-all duration-200 hover:bg-focused-brown hover:-translate-y-0.5"
+          >
+            <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-phone"></use>
+            </svg>
+            <span>{hero.primaryCtaText}</span>
+          </a>
+
+          <a
+            href={hero.secondaryCtaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex justify-center items-center gap-2.5 px-9 py-3.5 border-2 border-floral-white text-floral-white text-base font-medium rounded transition-all duration-200 hover:bg-floral-white hover:text-dark-coffee"
+          >
+            <svg class="w-5 h-5 shrink-0 fill-current" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#icon-instagram"></use>
+            </svg>
+            <span>{hero.secondaryCtaText}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Features ═══ -->
+    <section
+      class="py-24 px-8 bg-white"
+      id="lucrari"
+      aria-label="De ce să ne alegi"
+    >
+      <div class="max-w-6xl mx-auto mb-16 text-center">
+        <h2
+          class="font-heading text-4xl font-bold text-dark-coffee mb-2 tracking-tight"
+        >
+          {features.heading}
+        </h2>
+        <p
+          class="text-lg font-light text-taupe max-w-xl mx-auto leading-relaxed"
+        >
+          {features.description}
+        </p>
+      </div>
+
+      <ul class="flex flex-wrap gap-8 max-w-6xl mx-auto mb-16">
+        {
+          features.items?.map((item) => (
+            <li class="flex-1 basis-56 min-w-48 p-8 bg-white border-t-3 border-copper">
+              <h3 class="font-heading text-lg font-semibold text-dark-coffee mb-2">
+                {item.title}
+              </h3>
+              <p class="text-sm text-taupe leading-relaxed">
+                {item.description}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div
+        class="flex flex-wrap gap-2 max-w-6xl mx-auto"
+        aria-label="Galerie de lucrări"
+      >
+        {
+          showcase.images?.map((src) => (
+            <img
+              src={src}
+              alt=""
+              class="flex-1 basis-48 h-64 object-cover rounded"
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section
+      class="py-24 px-8 bg-dark-coffee text-white text-center"
+      id="estimare"
+      aria-label="Solicită o estimare gratuită"
+    >
+      <h2 class="font-heading text-4xl font-bold mb-4 tracking-tight">
+        {cta.heading}
+      </h2>
+      <p
+        class="text-lg font-light text-floral-white max-w-xl mx-auto mb-8 leading-relaxed"
+      >
+        {cta.description}
+      </p>
+      <ul class="flex justify-center gap-8 mb-16 flex-wrap">
+        {
+          cta.checklist?.map((text) => (
+            <li class="text-sm font-medium text-floral-white pl-5 relative before:content-['✓'] before:absolute before:left-0 before:text-copper before:font-bold">
+              {text}
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href={phoneHref}
+        class="inline-flex flex-col items-center gap-1 mb-4 transition-transform duration-150 hover:-translate-y-0.5"
+        aria-label="Sună pentru o estimare gratuită"
+      >
+        <span class="text-sm text-floral-white">{cta.callLabel}</span>
+        <span class="font-heading text-4xl font-bold text-copper tracking-wider"
+          >{phoneDisplay}</span
+        >
+      </a>
+      <p class="text-xs text-taupe">{availability}</p>
+    </section>
+
+    <!-- ═══ About ═══ -->
+    <section
+      class="flex flex-col md:flex-row min-h-[80vh]"
+      id="despre-noi"
+      aria-label="Despre noi"
+    >
+      <div class="flex-1 overflow-hidden max-md:h-[45vh]">
+        <img
+          src={about.teamImage}
+          alt="Echipa"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex-1 flex flex-col justify-center py-24 px-16 bg-white">
+        <h2
+          class="font-heading text-4xl font-bold text-dark-coffee mb-4 tracking-tight"
+        >
+          {about.heading}
+        </h2>
+        <p class="text-lg font-medium text-dark-coffee mb-4 leading-relaxed">
+          {about.subtitle}
+        </p>
+        {
+          about.paragraphs?.map((item) => (
+            <p class="text-sm text-taupe leading-loose mb-4">{item.text}</p>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ Footer ═══ -->
+  <footer
+    class="py-16 px-8 bg-dark-coffee text-floral-white text-center"
+    id="contact"
+  >
+    <h2 class="font-heading text-2xl font-semibold text-white mb-8">
+      {contact.heading}
+    </h2>
+    <ul class="flex justify-center gap-8 flex-wrap mb-8">
+      <li class="text-sm">
+        <a
+          href={phoneHref}
+          class="hover:text-white transition-colors duration-200"
+          >{phoneDisplay}</a
+        >
+      </li>
+      <li class="text-sm">
+        <a
+          href={contact.instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-white transition-colors duration-200"
+          >{contact.instagramHandle}</a
+        >
+      </li>
+      <li class="text-sm">{contact.address}</li>
+    </ul>
+  </footer>
+
+  <!-- ═══ Mascot ═══ -->
+  <div
+    class="mascot fixed bottom-5 left-5 z-[90] cursor-pointer opacity-0 select-none max-md:bottom-4"
+    id="mascot"
+    aria-label="Mascota atelierului"
+  >
+    <div
+      class="mascot-bubble absolute left-0 bottom-[calc(100%+0.5rem)] w-max max-w-52 py-2.5 px-3.5 bg-floral-white text-dark-coffee text-sm font-medium leading-normal rounded-lg opacity-0 pointer-events-none"
+    >
+      {mascot.bubbleText}
+    </div>
+    <img
+      src={mascot.image}
+      alt="Mascota Bolduratu — ciocan vesel"
+      class="mascot-img w-20 h-auto max-md:w-16"
+    />
+  </div>
+</Layout>
