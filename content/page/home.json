@@ -81,6 +81,6 @@
   "mascot": {
     "bubbleText": "Ai nevoie de o piesă din lemn? Sună-ne!",
     "image": "/assets/images/mascot/woodworking_mascot.png",
-    "isVisible": false
+    "isVisible": true
   }
 }
