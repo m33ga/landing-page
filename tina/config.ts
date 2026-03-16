@@ -300,6 +300,11 @@ export default defineConfig({
                 name: "image",
                 label: "Mascot Image",
               },
+              {
+                type: "boolean",
+                name: "isVisible",
+                label: "Is Visible",
+              }
             ],
           },
         ],

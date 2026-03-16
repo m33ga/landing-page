@@ -336,20 +336,22 @@ const withBase = (path: string) =>
   </footer>
 
   <!-- ═══ Mascot ═══ -->
-  <div
-    class="mascot fixed bottom-5 left-5 z-[90] cursor-pointer opacity-0 select-none max-md:bottom-4"
-    id="mascot"
-    aria-label="Mascota atelierului"
-  >
-    <div
-      class="mascot-bubble absolute left-0 bottom-[calc(100%+0.5rem)] w-max max-w-52 py-2.5 px-3.5 bg-floral-white text-dark-coffee text-sm font-medium leading-normal rounded-lg opacity-0 pointer-events-none"
-    >
-      {mascot.bubbleText}
-    </div>
-    <img
-      src={withBase(mascot.image)}
-      alt="Mascota"
-      class="mascot-img w-20 h-auto max-md:w-16"
-    />
-  </div>
+    {mascot.isVisible &&
+        <div
+        class="mascot fixed bottom-5 left-5 z-[90] cursor-pointer opacity-0 select-none max-md:bottom-4"
+        id="mascot"
+        aria-label="Mascota atelierului"
+      >
+        <div
+          class="mascot-bubble absolute left-0 bottom-[calc(100%+0.5rem)] w-max max-w-52 py-2.5 px-3.5 bg-floral-white text-dark-coffee text-sm font-medium leading-normal rounded-lg opacity-0 pointer-events-none"
+        >
+          {mascot.bubbleText}
+        </div>
+        <img
+          src={withBase(mascot.image)}
+          alt="Mascota"
+          class="mascot-img w-20 h-auto max-md:w-16"
+        />
+      </div>
+    }
 </Layout>
